@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-esb",
+  "version": "1.0.0",
+  "directories": {
+    "doc": "documentation"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "dev": "concurrently -n frontend,backend -c green,blue \"npm run dev:frontend\" \"npm run dev:backend\" ",
+    "backend:db:setup": "cd backend && pnpm db:seed"
+  }
+}
