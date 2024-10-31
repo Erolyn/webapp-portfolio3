@@ -1,5 +1,5 @@
 export type ExperienceProps = {
-  id: string; // UUIDs are stored as strings
+  id: string;
   title: string;
   description: string;
 };

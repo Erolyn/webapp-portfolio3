@@ -3,7 +3,7 @@ import Layout from "./components/Layout";
 import config from "./config";
 import { PageContextProvider, PageContextType, usePageContext } from "./contexts/PageContext";
 import Experiences from "./features/intro/components/Experiences";
-import ProjectsPage from "./features/projects/pages/ProjectsPage";
+import ProjectsPage from "./features/projects/pages/projectsPage";
 import { ExperienceProps } from "./types";
 
 

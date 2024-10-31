@@ -1,7 +1,7 @@
 import config from "../../../config";
 import { ExperienceProps } from "../../../types";
 
-// Fetch Experiences
+// Fetch Experiences - not in use
 export async function fetchExperienceData(): Promise<ExperienceProps[]> {
   try {
     const res = await fetch(`${config.apiAddress}:${config.apiPort}/experiences`);

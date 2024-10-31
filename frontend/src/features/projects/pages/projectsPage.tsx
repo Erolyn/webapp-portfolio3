@@ -17,8 +17,8 @@ const ProjectPage: React.FC = () => {
   // Handle adding a new project
   const handleAddProject = async (projectData: Omit<ProjectProps, "id">) => {
     try {
-      await create(projectData); // Add the project
-      //navigate("/projects"); // Navigate back to the project list after adding
+      await create(projectData);
+      
     } catch (error) {
       console.error(error);
     }

@@ -1,5 +1,7 @@
 import React, { createContext, Dispatch, ReactNode, useContext, useState } from "react";
 
+
+// Not in use
 export type PageContextType = {
 	activePage: string;
 	setActivePage: Dispatch<React.SetStateAction<string>>;

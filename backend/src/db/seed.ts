@@ -5,6 +5,7 @@ import { DB } from "./db";
 
 // The seed function will be called when the app starts
 export const seed = async (db: DB) => {
+
   // Drop the projects table if it exists
   db.exec(`DROP TABLE IF EXISTS projects`);
 
@@ -22,7 +23,7 @@ export const seed = async (db: DB) => {
     );
   `);
 
-  // Adjust the path as necessary to locate your projects.json file
+  // Read the projects data from the JSON file
   const filePath = join("src", "data", "projects", "projects.json");
   const file = await readFile(filePath, "utf-8"); // Read the JSON file
   const projects = projectsSchema.parse(JSON.parse(file)); // Validate the projects data
@@ -36,6 +37,7 @@ export const seed = async (db: DB) => {
   // Create a transaction for inserting projects
   const seedTransaction = db.transaction(() => {
     for (const project of projects) {
+
       // Transform the project data as needed for your database schema
       insertProject.run(
         project.id,

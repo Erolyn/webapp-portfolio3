@@ -3,14 +3,14 @@ import { Project } from "./projectTypes";
 import { projectSchema } from "./projectValidate";
 
 export type DbProject = {
-  id: UUID;             // or UUID type if that's what you're using
+  id: UUID;             
   title: string;
-  imageURL: string | null; // Allow null for optional fields
+  imageURL: string | null; 
   projectURL: string | null;
   description: string;
   category: string;
-  project_date: string;   // Assume it's stored as an ISO string in the database
-  is_public: number;     // Use number for boolean storage (1 or 0)
+  project_date: string;   
+  is_public: number;     
 };
 
 export const fromDb = (project: DbProject) => {

@@ -5,7 +5,7 @@ import { z } from "zod";
 
 export type ServerEnv = typeof env;
 
-// Brukes for å hente ut og validere miljøvariabler
+// Get environment variables
 export const env = createEnv({
   server: {
     NODE_ENV: z
@@ -15,7 +15,7 @@ export const env = createEnv({
     PORT: z.coerce.number().default(3999),
     DATABASE_URL: z.string().endsWith(".db"),
   },
-  runtimeEnv: process.env, // Bruker process.env som kilde for miljøvariabler (default i node for å hente ut miljøvariabler fra .env)
+  runtimeEnv: process.env, // Use process.env as the source of environment variables
   emptyStringAsUndefined: true,
   skipValidation: !!process.env.SKIP_ENV_VALIDATION,
 });

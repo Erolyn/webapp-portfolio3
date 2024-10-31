@@ -1,14 +1,14 @@
 import { UUID } from "../../../types";
 
 export type ProjectProps = {
-    id : UUID; // UUIDs are stored as strings
+    id : UUID;
     title: string;
-    imageURL?: string; // Updated to match the database schema
-    projectURL?: string; // Added to match the database schema
+    imageURL?: string;
+    projectURL?: string;
     description: string;
     category: string;
-    project_date: Date; // Updated to match the database schema
-    is_public: boolean; // Added to match the database schema
+    project_date: Date;
+    is_public: boolean;
   };
   
   export type CreateProjectFormProps = {

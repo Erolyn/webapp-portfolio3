@@ -77,7 +77,7 @@ export const createProjectRepository = (db: DB) => {
       const updatedProject = {
         ...existingProject,
         ...data,
-        id, // Ensure the id is included
+        id, 
       };
 
       const updateProject = db.prepare(`
