@@ -1,3 +1,12 @@
-Refactor TO-DO:
+Frontend:
+- Zod validation. 
+- Attempt at making components better, mainly focused on project-components. Components are now split into features: Initially experiences and projects. As projects was a little more time-consuming than expected, "remaining" components were put into "intro".
+- Cleaned up App.tsx and split into pages - Unfortunately SPA-functionality from the previous portfolio was difficult to implement, tried solving this with PageContext, but this is not functional. 
 
-- 
+Backend:
+- Projects has been expanded with new fields: is_publishes and project_date. 
+- SQLite db integration. Attempted prisma, but proved difficult.
+- Zod validates project-data. 
+- APIs and responses have been refactored. 
+- CRUD functionality implemented. 
+- Layered backend - controller, mapper, repo and service-layers. 
